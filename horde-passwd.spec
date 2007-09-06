@@ -1,7 +1,7 @@
 %define	module	passwd
 %define	name	horde-%{module}
-%define	version	3.0
-%define	release	%mkrel 4
+%define	version	3.0.1
+%define	release	%mkrel 1
 
 %define _requires_exceptions pear(Horde.*)
 
@@ -13,7 +13,7 @@ License:	GPL
 Group:		System/Servers
 Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.bz2
 Source2:	%{module}-horde.conf.bz2
-Patch0:		%{module}-3.0.script-shellbang.patch
+Patch0:		%{module}-3.0.1-script-shellbang.patch
 URL:		http://www.horde.org/%{module}/
 Requires:	horde >= 3.0
 BuildArch:	noarch
@@ -82,7 +82,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc LICENSE README docs
+%doc README docs
 %config(noreplace) %{_sysconfdir}/horde/registry.d/%{module}.php
 %config(noreplace) %{_sysconfdir}/horde/%{module}
 %{_datadir}/horde/%{module}
