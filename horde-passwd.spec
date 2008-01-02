@@ -17,6 +17,7 @@ Patch0:		%{module}-3.0.1-script-shellbang.patch
 URL:		http://www.horde.org/%{module}/
 Requires:	horde >= 3.0
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Passwd is the Horde password changing application. While it has been released
