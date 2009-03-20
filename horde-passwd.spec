@@ -1,7 +1,7 @@
 %define	module	passwd
 %define	name	horde-%{module}
-%define	version	3.0.1
-%define	release	%mkrel 3
+%define	version	3.1
+%define	release	%mkrel 1
 
 %define _requires_exceptions pear(Horde.*)
 
@@ -11,10 +11,10 @@ Release:	%{release}
 Summary:	The Horde password management application
 License:	GPL
 Group:		System/Servers
-Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.bz2
-Source2:	%{module}-horde.conf.bz2
-Patch0:		%{module}-3.0.1-script-shellbang.patch
 URL:		http://www.horde.org/%{module}/
+Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
+Source2:	%{module}-horde.conf.bz2
+Patch0:		%{module}-h3-3.1-script-shellbang.patch
 Requires:	horde >= 3.0
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
@@ -33,12 +33,7 @@ Accounts, Forwards, Passwd, and Vacation.
 
 %prep
 %setup -q -n %{module}-h3-%{version}
-%patch
-
-# fix encoding
-for file in `find . -type f`; do
-    perl -pi -e 'BEGIN {exit unless -T $ARGV[0];} tr/\r//d;' $file
-done
+%patch0 -p 1
 
 %build
 
