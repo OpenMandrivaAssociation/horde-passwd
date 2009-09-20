@@ -1,7 +1,7 @@
 %define	module	passwd
 %define	name	horde-%{module}
 %define	version	3.1.1
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 %define _requires_exceptions pear(Horde.*)
 
@@ -88,6 +88,12 @@ popd
 for file in %{buildroot}%{_sysconfdir}/horde/%{module}/*.dist; do
 	mv $file ${file%.dist}
 done
+
+%post
+%_post_webapp
+
+%postun
+%_postun_webapp
 
 %clean
 rm -rf %{buildroot}
