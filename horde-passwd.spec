@@ -1,7 +1,7 @@
 %define	module	passwd
 %define	name	horde-%{module}
-%define	version	3.1.1
-%define	release	%mkrel 3
+%define	version	3.1.2
+%define	release	%mkrel 1
 
 %define _requires_exceptions pear(Horde.*)
 
@@ -14,7 +14,7 @@ Group:		System/Servers
 URL:		http://www.horde.org/%{module}/
 Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 Source2:	%{module}-horde.conf.bz2
-Patch0:		%{module}-h3-3.1-script-shellbang.patch
+Patch0:		%{module}-h3-3.1.2-script-shellbang.patch
 Requires:	horde >= 3.3.5
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
@@ -94,10 +94,14 @@ for file in %{buildroot}%{_sysconfdir}/horde/%{module}/*.dist; do
 done
 
 %post
+%if %mdkversion < 201010
 %_post_webapp
+%endif
 
 %postun
+%if %mdkversion < 201010
 %_postun_webapp
+%endif
 
 %clean
 rm -rf %{buildroot}
