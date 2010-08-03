@@ -1,7 +1,7 @@
 %define	module	passwd
 %define	name	horde-%{module}
 %define	version	3.1.2
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 %define _requires_exceptions pear(Horde.*)
 
@@ -17,7 +17,6 @@ Source2:	%{module}-horde.conf.bz2
 Patch0:		%{module}-h3-3.1.2-script-shellbang.patch
 Requires:	horde >= 3.3.5
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Passwd is the Horde password changing application. While it has been released
