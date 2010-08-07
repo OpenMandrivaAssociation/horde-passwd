@@ -1,7 +1,7 @@
 %define	module	passwd
 %define	name	horde-%{module}
-%define	version	3.1.2
-%define	release	%mkrel 2
+%define	version	3.1.3
+%define	release	%mkrel 1
 
 %define _requires_exceptions pear(Horde.*)
 
@@ -14,7 +14,7 @@ Group:		System/Servers
 URL:		http://www.horde.org/%{module}/
 Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 Source2:	%{module}-horde.conf.bz2
-Patch0:		%{module}-h3-3.1.2-script-shellbang.patch
+#Patch0:		%{module}-h3-3.1.2-script-shellbang.patch
 Requires:	horde >= 3.3.5
 BuildArch:	noarch
 
@@ -32,7 +32,7 @@ Accounts, Forwards, Passwd, and Vacation.
 
 %prep
 %setup -q -n %{module}-h3-%{version}
-%patch0 -p 1
+#%patch0 -p 1
 
 %build
 
