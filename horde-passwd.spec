@@ -1,7 +1,7 @@
 %define	module	passwd
 %define	name	horde-%{module}
 %define	version	3.1.3
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 %define _requires_exceptions pear(Horde.*)
 
@@ -16,6 +16,7 @@ Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 Source2:	%{module}-horde.conf.bz2
 #Patch0:		%{module}-h3-3.1.2-script-shellbang.patch
 Requires:	horde >= 3.3.5
+Requires:	php-soap
 BuildArch:	noarch
 
 %description
