@@ -113,3 +113,112 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/horde/registry.d/%{module}.php
 %config(noreplace) %{_sysconfdir}/horde/%{module}
 %{_datadir}/horde/%{module}
+
+
+%changelog
+* Sun Aug 29 2010 Thomas Spuhler <tspuhler@mandriva.org> 3.1.3-2mdv2011.0
++ Revision: 574243
+- added requires php-soap
+
+* Sun Aug 08 2010 Thomas Spuhler <tspuhler@mandriva.org> 3.1.3-1mdv2011.0
++ Revision: 567526
+- Updated to version 3.1.3
+- added version 3.1.3 source file
+
+* Tue Aug 03 2010 Thomas Spuhler <tspuhler@mandriva.org> 3.1.2-2mdv2011.0
++ Revision: 565290
+- Increased release for rebuild
+
+* Mon Jan 18 2010 Guillaume Rousse <guillomovitch@mandriva.org> 3.1.2-1mdv2010.1
++ Revision: 493341
+- new version
+- restrict default access permissions to localhost only, as per new policy
+
+* Sun Sep 20 2009 Guillaume Rousse <guillomovitch@mandriva.org> 3.1.1-2mdv2010.0
++ Revision: 445914
+- don't forget call webapps post-installation macros to load module configuration
+
+* Sun Sep 20 2009 Guillaume Rousse <guillomovitch@mandriva.org> 3.1.1-1mdv2010.0
++ Revision: 445893
+- new version
+- new setup (simpler is better)
+
+* Fri Sep 11 2009 Thierry Vignaud <tv@mandriva.org> 3.1-2mdv2010.0
++ Revision: 437886
+- rebuild
+
+* Fri Mar 20 2009 Guillaume Rousse <guillomovitch@mandriva.org> 3.1-1mdv2009.1
++ Revision: 359193
+- new version
+
+* Tue Jul 22 2008 Thierry Vignaud <tv@mandriva.org> 3.0.1-3mdv2009.0
++ Revision: 240833
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Thu Sep 06 2007 Guillaume Rousse <guillomovitch@mandriva.org> 3.0.1-1mdv2008.0
++ Revision: 81205
+- new version
+
+
+* Mon Jan 01 2007 Guillaume Rousse <guillomovitch@mandriva.org> 3.0-4mdv2007.0
++ Revision: 103022
+- don't forget theme
+
+  + Andreas Hasenack <andreas@mandriva.com>
+    - Import horde-passwd
+
+* Sat Aug 26 2006 Guillaume Rousse <guillomovitch@mandriva.org> 3.0-3mdv2007.0
+- Rebuild
+
+* Wed Jan 11 2006 Guillaume Rousse <guillomovitch@mandriva.org> 3.0-2mdk
+- fix automatic dependencies
+
+* Tue Dec 27 2005 Guillaume Rousse <guillomovitch@mandriva.org> 3.0-1mdk
+- new version
+- rediff patch 0
+- %%mkrel
+
+* Fri Jul 01 2005 Guillaume Rousse <guillomovitch@mandriva.org> 2.2.2-1mdk 
+- new version
+- better fix encodings
+- spec cleanup
+- fix script shellbang
+
+* Fri Feb 18 2005 Oden Eriksson <oeriksson@mandrakesoft.com> 2.2.1-4mdk
+- spec file cleanups, remove the ADVX-build stuff
+- strip away annoying ^M
+
+* Fri Jan 14 2005 Guillaume Rousse <guillomovitch@mandrake.org> 2.2.1-3mdk 
+- top-level is now /var/www/horde/passwd
+- config is now in /etc/horde/passwd
+- other non-accessible files are now in /usr/share/horde/passwd
+- no more apache configuration
+- rpmbuildupdate aware
+- spec cleanup
+
+* Wed Sep 15 2004 Guillaume Rousse <guillomovitch@mandrake.org> 2.2.1-2mdk 
+- fixed icon name in horde config
+
+* Sun Sep 05 2004 Guillaume Rousse <guillomovitch@mandrake.org> 2.2.1-1mdk 
+- new release
+- correct description
+
+* Tue Jul 20 2004 Guillaume Rousse <guillomovitch@mandrake.org> 2.2-5mdk 
+- apache config file in /etc/httpd/webapps.d
+
+* Sat Jul 03 2004 Guillaume Rousse <guillomovitch@mandrake.org> 2.2-4mdk 
+- really remove useless provide
+
+* Sun May 02 2004 Guillaume Rousse <guillomovitch@mandrake.org> 2.2-3mdk
+- renamed to horde-passwd
+- pluggable horde configuration
+- standard perms for /etc/httpd/conf.d/%%{order}_horde-passwd.conf
+- don't provide useless ADVXpackage virtual package
+
+* Wed Apr 07 2004 Guillaume Rousse <guillomovitch@mandrake.org> 2.2-1mdk
+- first distinct package
+
