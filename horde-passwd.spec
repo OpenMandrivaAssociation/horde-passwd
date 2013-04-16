@@ -1,13 +1,8 @@
 %define	module	passwd
-%define	name	horde-%{module}
-%define	version	3.1.3
-%define release:	4
 
-%define _requires_exceptions pear(Horde.*)
-
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		horde-%{module}
+Version:	3.1.3
+Release:	4
 Summary:	The Horde password management application
 License:	GPL
 Group:		System/Servers
