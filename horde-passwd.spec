@@ -1,7 +1,7 @@
 %define	module	passwd
 %define	name	horde-%{module}
 %define	version	3.1.3
-%define	release	%mkrel 2
+%define release:	3
 
 %define _requires_exceptions pear(Horde.*)
 
@@ -93,15 +93,7 @@ for file in %{buildroot}%{_sysconfdir}/horde/%{module}/*.dist; do
 	mv $file ${file%.dist}
 done
 
-%post
-%if %mdkversion < 201010
-%_post_webapp
-%endif
 
-%postun
-%if %mdkversion < 201010
-%_postun_webapp
-%endif
 
 %clean
 rm -rf %{buildroot}
