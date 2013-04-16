@@ -1,7 +1,7 @@
 %define	module	passwd
 %define	name	horde-%{module}
 %define	version	3.1.3
-%define release:	3
+%define release:	4
 
 %define _requires_exceptions pear(Horde.*)
 
