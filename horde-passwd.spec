@@ -2,7 +2,7 @@
 
 Name:		horde-%{module}
 Version:	3.1.3
-Release:	4
+Release:	5
 Summary:	The Horde password management application
 License:	GPL
 Group:		System/Servers
@@ -33,8 +33,6 @@ Accounts, Forwards, Passwd, and Vacation.
 %build
 
 %install
-rm -rf %{buildroot}
-
 # apache configuration
 install -d -m 755 %{buildroot}%{_webappconfdir}
 cat > %{buildroot}%{_webappconfdir}/%{name}.conf <<EOF
@@ -85,12 +83,9 @@ for file in %{buildroot}%{_sysconfdir}/horde/%{module}/*.dist; do
 done
 
 
-
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
 %doc README docs
 %config(noreplace) %{_webappconfdir}/%{name}.conf
 %config(noreplace) %{_sysconfdir}/horde/registry.d/%{module}.php
