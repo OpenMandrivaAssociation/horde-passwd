@@ -2,7 +2,7 @@
 
 Name:		horde-%{module}
 Version:	3.1.3
-Release:	5
+Release:	6
 Summary:	The Horde password management application
 License:	GPL
 Group:		System/Servers
