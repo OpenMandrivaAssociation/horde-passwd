@@ -6,7 +6,7 @@ Release:	6
 Summary:	The Horde password management application
 License:	GPL
 Group:		System/Servers
-URL:		http://www.horde.org/%{module}/
+URL:		https://www.horde.org/%{module}/
 Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 Source2:	%{module}-horde.conf.bz2
 #Patch0:		%{module}-h3-3.1.2-script-shellbang.patch
